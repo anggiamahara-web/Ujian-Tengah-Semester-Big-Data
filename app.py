@@ -232,11 +232,14 @@ def predict_torch(image_input):
     model = load_torch_model()
     results = model.predict(image_input, imgsz=224, conf=0.5, verbose=False)
 
+
+
     if results[0].boxes is not None and len(results[0].boxes) > 0:
         boxes = results[0].boxes
         cls_idx = int(boxes.cls[0].item())
         conf = float(boxes.conf[0].item())
         label = f"{results[0].names[cls_idx]} ({conf:.2f})"
+
         st.image(results[0].plot(), caption="🎯 Hasil Deteksi YOLO")
         return label, [conf]
 
@@ -330,3 +333,6 @@ st.markdown("""
     🌷 🌸 💖 🌺 💕 🌼 💗 🌹 🌻
 </div>
 """, unsafe_allow_html=True)
+
+
+
