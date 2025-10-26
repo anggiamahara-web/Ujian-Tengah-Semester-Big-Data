@@ -235,7 +235,7 @@ if os.path.exists(image_folder):
     for i, img_file in enumerate(sorted(images)):
         img_path = os.path.join(image_folder, img_file)
         with cols[i % 4]:
-            st.image(Image.open(img_path), use_container_width=True)
+            st.image(Image.open(img_path), use_column_width=True)
             st.markdown(
                 f"<p style='text-align:center; color:#000000; font-weight:600; font-size:14px;'>{img_file}</p>",
                 unsafe_allow_html=True

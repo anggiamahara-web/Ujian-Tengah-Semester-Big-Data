@@ -196,7 +196,7 @@ uploaded_file = st.file_uploader("📤 Unggah gambar (JPG/PNG):", type=["jpg", "
 
 if uploaded_file:
     image = Image.open(uploaded_file).convert("RGB")
-    st.image(image, caption="📷 Gambar yang diunggah", use_container_width=True)
+    st.image(image, caption="📷 Gambar yang diunggah", use_column_width=True)
 
 # ==========================================================
 # 🌹 7. LOAD MODEL
