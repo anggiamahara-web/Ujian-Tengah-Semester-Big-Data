@@ -1,8 +1,9 @@
 # Virtual environments
 venv/
+.venv/
 ENV/
 env/
-_pycache_/
+__pycache__/
 *.pyc
 .DS_Store
 
