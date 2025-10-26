@@ -1,0 +1,18 @@
+# Virtual environments
+venv/
+ENV/
+env/
+_pycache_/
+*.pyc
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# System
+Thumbs.db
+
+# Data or model files
+*.pkl
+*.ckpt
